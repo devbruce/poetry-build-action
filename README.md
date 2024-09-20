@@ -1,4 +1,10 @@
-# poetry-build-action
+<h1 align="center">
+    poetry-build-action
+</h1>
+
+<p align="center">
+    <img src="https://img.shields.io/github/release/devbruce/poetry-build-action.svg" />
+</p>
 
 > [!NOTE]  
 > GitHub Action for building and caching python environment with [Poetry](https://python-poetry.org/)
