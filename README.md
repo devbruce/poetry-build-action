@@ -8,6 +8,7 @@
 ## References
 
 - [Creating a composite action](https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-composite-action)
+- [Install Poetry Action](https://github.com/marketplace/actions/install-poetry-action)
 
 <br>
 
