@@ -11,12 +11,7 @@ runs:
   using: "composite"
   steps:
     #----------------------------------------------
-    #       Check out repo
-    #----------------------------------------------
-    - name: Check out repository
-      uses: actions/checkout@v4
-    #----------------------------------------------
-    #       Set up python
+    # Set up python
     #----------------------------------------------
     - name: Set up python
       id: setup-python
@@ -24,7 +19,7 @@ runs:
       with:
         python-version: ${{ inputs.python-version }}
     #----------------------------------------------
-    #  -----  install & configure poetry  -----
+    # Install & configure poetry
     #----------------------------------------------
     - name: Install Poetry
       uses: snok/install-poetry@v1
@@ -34,7 +29,7 @@ runs:
         virtualenvs-path: .venv
         installer-parallel: true
     #----------------------------------------------
-    #       load cached venv if cache exists
+    # Load cached venv if cache exists
     #----------------------------------------------
     - name: Load cached venv
       id: cached-poetry-dependencies
@@ -43,7 +38,7 @@ runs:
         path: .venv
         key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
     #----------------------------------------------
-    # install dependencies if cache does not exist
+    # Install dependencies if cache does not exist
     #----------------------------------------------
     - name: Install dependencies
       if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
